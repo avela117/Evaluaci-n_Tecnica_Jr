@@ -214,3 +214,4 @@ FROM Venta v
 JOIN Producto p ON v.CodigoProducto = p.CodigoProducto
 JOIN Categoria c ON p.CodigoCategoria = c.CodigoCategoria
 ORDER BY v.Fecha DESC, v.CodigoVenta DESC;
+CREATE DATABASE bd_et;
