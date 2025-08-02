@@ -209,7 +209,9 @@ BEGIN
     SET @i = @i + 1;
 END;
 
-SELECT TOP 1 c.Nombre AS NombreCategoria
+SELECT TOP 1 
+    c.Nombre AS NombreCategoria,
+    v.Fecha AS FechaVenta
 FROM Venta v
 JOIN Producto p ON v.CodigoProducto = p.CodigoProducto
 JOIN Categoria c ON p.CodigoCategoria = c.CodigoCategoria
